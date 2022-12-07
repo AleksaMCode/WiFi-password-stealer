@@ -25,21 +25,27 @@ This summer I decided to do exactly that, to build a device that will allow me t
 
 ## Requirements - What you'll need
 <p align="justify"><img src="./resources/RPi-pico.png?raw=true" width="150" rotation="90" title="xkcd illustration" align="left" hspace="5" vspace="5">
-<br><br>
+<br><br><br>
 <ul>
 <li>Raspberry Pi Pico</li>
 <li>Micro USB to USB Cable</li>
-<li>Computer has to have internet access in order to send stolen data to an email.</li>
+<li>Jumper Wire (optional)</li>
 <li>Transform RPi Pico into a USB Rubber Ducky. <a href="https://github.com/dbisu/pico-ducky">Follow these simple steps.</a></li>
-</ul></p><br><br>
+</ul></p><br><br><br>
 
 > **Note**: <p align="justify">It is possible to build this tool using Rubber Ducky, which will make this whole process a bit easer but more expensive as <a href="https://www.raspberrypi.com/products/raspberry-pi-pico/">RPi Pico</a> costs $4.00 and the <a href="https://shop.hak5.org/products/usb-rubber-ducky">Rubber Ducky</a> costs $80.00.</p>
 
 ## Keystroke injection
-<p align="justify">Keystorke injection tool, once connected to a host machine, executes malicious commands by running code that mimics keystrokes enterned by a user. While it looks like a USB drive, it acts like a keyboard that types in a preprogrammed payload. Tools like Rubber Ducky can type over 1,000 words per minut. Although this project is focosed on RPi Pico, I'm not sure what speed it can achieve. Once created, anyone with physical access can deploy these payloads with ease.</p>
+<p align="justify">Keystorke injection tool, once connected to a host machine, executes malicious commands by running code that mimics keystrokes enterned by a user. While it looks like a USB drive, it acts like a keyboard that types in a preprogrammed payload. Tools like Rubber Ducky can type over 1,000 words per minut. Once created, anyone with physical access can deploy these payloads with ease.</p>
 
 ### USB Mass Storage Device Problem
-<p align="justify">One of the advantages of Rubber Ducky over RPi Pico is that it doesn't show up as a USB mass storage device once plugged in. This isn't a default behaviour for RPi. If you want to prevent your RPi from showing up as a USB mass storage device when plugged into the target computer you need to connect jumper wire between pin 18 (<code>GND</code>) and pin 20 (<code>GPIO15</code>).</p>
+<p align="justify">One of the advantages of Rubber Ducky over RPi Pico is that it doesn't show up as a USB mass storage device once plugged in. This isn't a default behaviour for RPi. If you want to prevent your RPi from showing up as a USB mass storage device when plugged in, you need to connect jumper wire between pin 18 (<code>GND</code>) and pin 20 (<code>GPIO15</code>).</p>
+
+> **Note**:
+> <ul>
+> <li>Upload your payload to RPi before you connect the pins.</li>
+> <li>Don't solder the pins because you will probably want to change/update the payload at some point.</li>
+> </ul>
 
 ## Sending stolen data over email
 ## Protection
