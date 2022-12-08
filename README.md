@@ -52,7 +52,7 @@ This summer I decided to do exactly that, to build a device that will allow me t
 > </ul>
 
 ## Sending stolen data over email
-<p align="justify">Once the passwords have been exportet to the <code>.txt</code> file, payload will send the data to the appointed email over the Yahoo SMTP. Check out this <a href="https://github.com/AleksaMCode/university-notices-email-notifier#yahoo-smtp">link</a> to see how to setup Yahoo SMTP. Also, the payload needs to be updated with a proper SMTP information.</p>
+<p align="justify">Once the passwords have been exportet to the <code>.txt</code> file, payload will send the data to the appointed email over the Yahoo SMTP. Check out this <a href="https://github.com/AleksaMCode/university-notices-email-notifier#yahoo-smtp">link</a> to see how to set up Yahoo SMTP. Also, the payload needs to be updated with a proper SMTP information.</p>
 
 https://github.com/AleksaMCode/WiFi-password-stealer/blob/d99f11cd630e91d7e9a409bfed175ca46e899c14/payload.dd#L28
 
