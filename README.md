@@ -27,7 +27,7 @@ This summer I decided to do exactly that, to build a device that will allow me t
 
 ## Requirements - What you'll need
 <p align="justify"><img src="./resources/RPi-pico.png?raw=true" width="150" title="RPi pico illustration" align="left" hspace="5" vspace="5">
-<br><br><br>
+<br><br>
 <ul>
 <li>Raspberry Pi Pico</li>
 <li>Micro USB to USB Cable</li>
@@ -54,7 +54,17 @@ This summer I decided to do exactly that, to build a device that will allow me t
 
 ## Fetching stored WiFi passwords
 ## Sending stolen data over email
+<p align="justify">Once the passwords have been exportet to the <code>.txt</code> file, payload will send the data to the appointed email over the Yahoo SMTP. Check out this <a href="https://github.com/AleksaMCode/university-notices-email-notifier#yahoo-smtp">link</a> to see how to setup Yahoo SMTP. Also, the payload needs to be updated with a proper SMTP information.</p>
+
+https://github.com/AleksaMCode/WiFi-password-stealer/blob/d99f11cd630e91d7e9a409bfed175ca46e899c14/payload.dd#L28
+
+<p align="justify">After adding SMTP password, receiver and send email you need to copy the payload.dd to a RPi Pico.</a>
+
+> **Note**: <p align="justify">You can also use some other email provider SMTP, but you should be mindful of SMTP server and port number you will write in the payload.</p>
+
 ## Setup
+<p align="justify">After creating pico-ducky, you only need to copy the modified payload (adjusted for your SMTP information) to the RPi Pico.</p>
+
 ## Protection
 
 ## To-Do List
