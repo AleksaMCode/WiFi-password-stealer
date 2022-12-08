@@ -11,7 +11,6 @@ This summer I decided to do exactly that, to build a device that will allow me t
   - [Requirements - What you'll need](#requirements---what-youll-need)
   - [Keystroke injection](#keystroke-injection)
     - [USB Mass Storage Device Problem](#usb-mass-storage-device-problem)
-  - [Fetching stored WiFi passwords](#fetching-stored-wifi-passwords)
   - [Sending stolen data over email](#sending-stolen-data-over-email)
   - [Setup](#setup)
   - [Protection](#protection)
@@ -52,7 +51,6 @@ This summer I decided to do exactly that, to build a device that will allow me t
 > <li>Don't solder the pins because you will probably want to change/update the payload at some point.</li>
 > </ul>
 
-## Fetching stored WiFi passwords
 ## Sending stolen data over email
 <p align="justify">Once the passwords have been exportet to the <code>.txt</code> file, payload will send the data to the appointed email over the Yahoo SMTP. Check out this <a href="https://github.com/AleksaMCode/university-notices-email-notifier#yahoo-smtp">link</a> to see how to setup Yahoo SMTP. Also, the payload needs to be updated with a proper SMTP information.</p>
 
@@ -60,7 +58,7 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/d99f11cd630e91d7e9a409
 
 <p align="justify">After adding SMTP password, receiver and send email you need to copy the payload.dd to a RPi Pico.</a>
 
-> **Note**: <p align="justify">You can also use some other email provider SMTP, but you should be mindful of SMTP server and port number you will write in the payload.</p>
+> **Note**: <p align="justify">You can also use some an SMTP from another email provider, but you should be mindful of SMTP server and port number you will write in the payload.</p>
 
 ## Setup
 <p align="justify">After creating pico-ducky, you only need to copy the modified payload (adjusted for your SMTP information) to the RPi Pico.</p>
