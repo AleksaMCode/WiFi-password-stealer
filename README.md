@@ -49,14 +49,14 @@
 > <li>In order to use Ducky Script to write the payload on your RPi Pico you first need to convert it to a pico-ducky.
 
 ## Exfiltration
-<p align="justify">Data exfiltration is an unauthorized trasfer of data from a computer/device. Once the data is collected, adversary can package it to avoid detection while sending data over network, using encryption or compression. Two most common way of exfiltration are:
+<p align="justify">Data exfiltration is an unauthorized transfer of data from a computer/device. Once the data is collected, adversary can package it to avoid detection while sending data over network, using encryption or compression. Two most common way of exfiltration are:
 <ul>
 <li>Exfiltration over network medium.</li>
 <li>Exfiltration over a physical medium.</li>
 </ul>
 
 ## Keystroke injection tool
-<p align="justify">Keystorke injection tool, once connected to a host machine, executes malicious commands by running code that mimics keystrokes enterned by a user. While it looks like a USB drive, it acts like a keyboard that types in a preprogrammed payload. Tools like Rubber Ducky can type over 1,000 words per minut. Once created, anyone with physical access can deploy this payload with ease.</p>
+<p align="justify">Keystorke injection tool, once connected to a host machine, executes malicious commands by running code that mimics keystrokes entered by a user. While it looks like a USB drive, it acts like a keyboard that types in a preprogrammed payload. Tools like Rubber Ducky can type over 1,000 words per minut. Once created, anyone with physical access can deploy this payload with ease.</p>
 
 ### Keystoke injection
 <p align="justify">The payload uses <code>STRING</code> command processes keystroke for injection. It accepts one or more alphanumeric/punctuation characters. <code>STRING</code> will type the remainder of the line exactly as-is into the target machine. The <code>ENTER</code>/<code>SPACE</code> will simulate a press of keyboard keys.</p.>
