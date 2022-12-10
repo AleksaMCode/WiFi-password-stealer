@@ -35,7 +35,7 @@
 
 ## Requirements - What you'll need
 <p align="justify"><img src="./resources/RPi-pico.png?raw=true" width="150" title="RPi pico illustration" align="left" hspace="5" vspace="5">
-<br><br><br>
+<br><br>
 <ul>
 <li>Raspberry Pi Pico (RPi Pico)</li>
 <li>Micro USB to USB Cable</li>
