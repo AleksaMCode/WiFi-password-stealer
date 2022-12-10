@@ -91,6 +91,8 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/d99f11cd630e91d7e9a409
 ### Exfiltrated WiFi data
 <p align="justify">Below is an example of extracted data from a victims machine in a <code>.txt</code> format.<p>
 
+https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a210fbf25db3a828455/resources/wifi_pass.txt#L1-L5
+
 ## Limitations/Drawbacks
 <ul>
 <li><p align="justify">This pico-ducky currently works only on Windows OS.</p></li>
