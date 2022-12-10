@@ -88,7 +88,7 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/d99f11cd630e91d7e9a409
 > </p>
 
 ### Exfiltrated WiFi data
-<p align="justify">Below is an example of exfiltrated and formated data from a victims machine in a <code>.txt</code> file.<p>
+<p align="justify">Below is an example of exfiltrated and formatted data from a victims machine in a <code>.txt</code> file.<p>
 
 https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a210fbf25db3a828455/resources/wifi_pass.txt#L1-L5
 
