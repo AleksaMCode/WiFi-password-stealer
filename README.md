@@ -21,7 +21,7 @@
   - [To-Do List](#to-do-list)
 
 ## Introduction
-<p align="justify">This summer I decided to do exactly that, to build a device that will allow me to steel data from a victims computer. So, how does one deploy malware and exfiltrate data? In the following text I will explain all of the necessary steps, theory and nuances when it comes to building your own keystroke injection tool. While this project/tutorial focuses on WiFi passwords, payload code could easily be altered to do something more nefarious than stealing stored WiFi passwords. You are only limited by your imagination (and your technical skills).</p>
+<p align="justify">This summer I decided to do exactly that, to build a device that will allow me to steal data from a victims computer. So, how does one deploy malware and exfiltrate data? In the following text I will explain all of the necessary steps, theory and nuances when it comes to building your own keystroke injection tool. While this project/tutorial focuses on WiFi passwords, payload code could easily be altered to do something more nefarious than stealing stored WiFi passwords. You are only limited by your imagination (and your technical skills).</p>
 
 ## Setup
 <p align="justify">After creating pico-ducky, you only need to copy the modified payload (adjusted for your SMTP details) to the RPi Pico.</p>
@@ -35,18 +35,18 @@
 
 ## Requirements - What you'll need
 <p align="justify"><img src="./resources/RPi-pico.png?raw=true" width="150" title="RPi pico illustration" align="left" hspace="5" vspace="5">
-<br><br>
+<br><br><br>
 <ul>
-<li>Raspberry Pi Pico</li>
+<li>Raspberry Pi Pico (RPi Pico)</li>
 <li>Micro USB to USB Cable</li>
 <li>Jumper Wire (optional)</li>
-<li>Transform RPi Pico into a USB Rubber Ducky (pico-ducky). <a href="https://github.com/dbisu/pico-ducky">Follow these simple steps.</a></li>
+<li>pico-ducky - Transformed RPi Pico into a USB Rubber Ducky</li>
 </ul></p><br><br>
 
 > **Note**:
-> <p align="justify">
-> <ul><li>It is possible to build this tool using Rubber Ducky, but keep in mind that <a href="https://www.raspberrypi.com/products/raspberry-pi-pico/">RPi Pico</a> costs $4.00 and the <a href="https://shop.hak5.org/products/usb-rubber-ducky">Rubber Ducky</a> costs $80.00.</li>
-> <li>In order to use Ducky Script to write the payload on your RPi Pico you first need to convert it to a pico-ducky.
+> <ul><li><p align="justify">It is possible to build this tool using Rubber Ducky, but keep in mind that <a href="https://www.raspberrypi.com/products/raspberry-pi-pico/">RPi Pico</a> costs $4.00 and the <a href="https://shop.hak5.org/products/usb-rubber-ducky">Rubber Ducky</a> costs $80.00.</p></li>
+> <li><p align="justify">In order to use Ducky Script to write the payload on your RPi Pico you first need to convert it to a pico-ducky. Follow these <a href="https://github.com/dbisu/pico-ducky">simple steps</a> in order to create pico-ducky.</p></li>
+> </ul>
 
 ## Exfiltration
 <p align="justify">Data exfiltration is an unauthorized transfer of data from a computer/device. Once the data is collected, adversary can package it to avoid detection while sending data over network, using encryption or compression. Two most common way of exfiltration are:
@@ -74,22 +74,21 @@
 > </ul>
 
 ## Sending stolen data over email
-<p align="justify">Once the passwords have been exportet to the <code>.txt</code> file, payload will send the data to the appointed email over the Yahoo SMTP. Check out this <a href="https://github.com/AleksaMCode/university-notices-email-notifier#yahoo-smtp">link</a> to see how to set up Yahoo SMTP. Also, the payload needs to be updated with a proper SMTP information.</p>
+<p align="justify">Once the passwords have been exportet to the <code>.txt</code> file, payload will send the data to the appointed email over the Yahoo SMTP. Check out this <a href="https://github.com/AleksaMCode/university-notices-email-notifier#yahoo-smtp">link</a> to see how to set up Yahoo SMTP. Also, the payload needs to be updated with proper SMTP information.</p>
 
 https://github.com/AleksaMCode/WiFi-password-stealer/blob/d99f11cd630e91d7e9a409bfed175ca46e899c14/payload.dd#L28
 
 <p align="justify">After sending data over email, the <code>.txt</code> file is deleted.</p>
 
 > **Note**: 
-> <p align="justify">
 > <ul>
-> <li>You can also use some an SMTP from another email provider, but you should be mindful of SMTP server and port number you will write in the payload.</li>
-> <li>Keep in mind that some networks could be blocking usage of an unknown SMTP at the firewall.</li>
+> <li><p align="justify">You can also use some an SMTP from another email provider, but you should be mindful of SMTP server and port number you will write in the payload.</p></li>
+> <li><p align="justify">Keep in mind that some networks could be blocking usage of an unknown SMTP at the firewall.</p></li>
 > </ul>
 > </p>
 
 ### Exfiltrated WiFi data
-<p align="justify">Below is an example of extracted data from a victims machine in a <code>.txt</code> format.<p>
+<p align="justify">Below is an example of exfiltrated and formated data from a victims machine in a <code>.txt</code> file.<p>
 
 https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a210fbf25db3a828455/resources/wifi_pass.txt#L1-L5
 
@@ -110,3 +109,4 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a
 - [ ] Obfuscate the command prompt.
 - [ ] Implement exfiltration over a physical medium.
 - [ ] Create a payload for Linux.
+- [ ] Encode/Encrypt exfiltrated data before sending it over email.
