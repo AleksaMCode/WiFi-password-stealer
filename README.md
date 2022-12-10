@@ -59,7 +59,7 @@
 <p align="justify">Keystorke injection tool, once connected to a host machine, executes malicious commands by running code that mimics keystrokes entered by a user. While it looks like a USB drive, it acts like a keyboard that types in a preprogrammed payload. Tools like Rubber Ducky can type over 1,000 words per minut. Once created, anyone with physical access can deploy this payload with ease.</p>
 
 ### Keystoke injection
-<p align="justify">The payload uses <code>STRING</code> command processes keystroke for injection. It accepts one or more alphanumeric/punctuation characters. <code>STRING</code> will type the remainder of the line exactly as-is into the target machine. The <code>ENTER</code>/<code>SPACE</code> will simulate a press of keyboard keys.</p.>
+<p align="justify">The payload uses <code>STRING</code> command processes keystroke for injection. It accepts one or more alphanumeric/punctuation characters. <code>STRING</code> will type the remainder of the line exactly as-is into the target machine. The <code>ENTER</code>/<code>SPACE</code> will simulate a press of keyboard keys.</p>
 
 ### Delays
 <p align="justify">We use <code>DELAY</code> command to temporarily pause execution of the payload. This is useful when a payload needs to wait for an element such as a Command Line to load. Delay is useful when used at the very beginning when a new USB device is connected to a targeted computer. Initially computer must complete a set of actions before it can begin accepting input commands. In the case of <a href="https://en.wikipedia.org/wiki/Human_interface_device">HIDs</a> setup time is very short. In most cases it takes a fraction of a second, because the drivers are built-in. However, in some instances a slower PC may take longer to recognize the pico-ducky. The general advice is to adjust the delay time according to your target.</p>
@@ -96,11 +96,11 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a
 <ul>
 <li><p align="justify">This pico-ducky currently works only on Windows OS.</p></li>
 <li><p align="justify">This attack requires a physical access to an unlocked device in order to be successfully deployed.</p></li>
-<li><p align="justify">Victims machine firewall or networks firewall may prevent you from sending the stolen data to your email.</p></li>
+<li><p align="justify">Victims machine firewall or networks firewall may prevent stolen data from being sent over the network medium.</p></li>
 <li><p align="justify">Payload delays could be inadequate due to varying speeds of different computers used to deploy an attack.</p></li>
 <li><p align="justify">This device isn't really stealthy, actually it's quite the opposite, it's really bulky.</p></li>
 <li><p align="justify">If the <code>Caps Lock</code> is ON, some of the payload code will not be executed and the exploit will fail.</p></li>
-<li><p align="justify">If the computer has set non-English Environment this exploit won't be successful.</p></li>
+<li><p align="justify">If the computer has a non-English Environment set, this exploit won't be successful.</p></li>
 </ul>
 
 ## To-Do List
