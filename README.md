@@ -110,3 +110,4 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a
 - [ ] Implement exfiltration over a physical medium.
 - [ ] Create a payload for Linux.
 - [ ] Encode/Encrypt exfiltrated data before sending it over email.
+- [ ] Implement indicator of successfully completed exploit.
