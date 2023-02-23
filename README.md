@@ -99,12 +99,12 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a
 <li><p align="justify">Machine's firewall or network's firewall may prevent stolen data from being sent over the network medium.</p></li>
 <li><p align="justify">Payload delays could be inadequate due to varying speeds of different computers used to deploy an attack.</p></li>
 <li><p align="justify">This device isn't really stealthy, actually it's quite the opposite, it's really bulky.</p></li>
-<li><p align="justify">If the <code>Caps Lock</code> is ON, some of the payload code will not be executed and the exploit will fail.</p></li>
+<li><p align="justify"><s>If the <code>Caps Lock</code> is ON, some of the payload code will not be executed and the exploit will fail.</p></s></li>
 <li><p align="justify">If the computer has a non-English Environment set, this exploit won't be successful.</p></li>
 </ul>
 
 ## To-Do List
-- [ ] Fix `Caps Lock` bug.
+- [x] Fix `Caps Lock` bug.
 - [ ] Fix non-English Environment bug.
 - [ ] Obfuscate the command prompt.
 - [ ] Implement exfiltration over a physical medium.
