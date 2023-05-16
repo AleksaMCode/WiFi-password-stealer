@@ -35,7 +35,7 @@
 <ul>
 <li>Physical access to victim's computer.</li>
 <li>Unlocked victim's computer.</li>
-<li>For the exfiltration over a network medium, victims computer has to have an internet access in order to send the stolen data using <a href="https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol">SMTP</a>.</li>
+<li><p align="justify">Victim's computer has to have an internet access in order to send the stolen data using <a href="https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol">SMTP</a> for the exfiltration over a network medium.</li></p>
 <li>Knowledge of victim's computer password for the Linux exploit.</li>
 </ul>
 
@@ -68,23 +68,23 @@
 ## Exfiltration
 <p align="justify">Data exfiltration is an unauthorized transfer of data from a computer/device. Once the data is collected, adversary can package it to avoid detection while sending data over the network, using encryption or compression. Two most common way of exfiltration are:</p>
 <ul>
-<li>Exfiltration over network medium.</li>
+<li>Exfiltration over the network medium.</li>
   <ul>
-    <li><p align="justify">This approach was used for the Windows exploit. The whole payload can be seen <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/payload/payload.dd">here</a>.</li>
+    <li><p align="justify">This approach was used for the Windows exploit. The whole payload can be seen <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/payload/payload_windows.dd">here</a>.</li>
   </ul>
 <li>Exfiltration over a physical medium.</li>
   <ul>
-    <li><p align="justify">This approach was used for the Linux exploit. The whole payload can be seen <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/payload/payload2.dd">here</a>.</li>
+    <li><p align="justify">This approach was used for the Linux exploit. The whole payload can be seen <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/payload/payload_linux.dd">here</a>.</li>
   </ul>
 </ul>
 
 ### Windows exploit
-<p align="justify">In order to use the Windows payload, called <code>payload.dd</code>, you don't need to connect any jumper wire between pins.</p>
+<p align="justify">In order to use the Windows payload (<code>payload.dd</code>), you don't need to connect any jumper wire between pins.</p>
 
 #### Sending stolen data over email
 <p align="justify">Once passwords have been exported to the <code>.txt</code> file, payload will send the data to the appointed email using Yahoo SMTP. For more detailed instructions visit a following <a href="https://github.com/AleksaMCode/university-notices-email-notifier#yahoo-smtp">link</a>. Also, the payload needs to be updated with your SMTP information.</p>
 
-https://github.com/AleksaMCode/WiFi-password-stealer/blob/d99f11cd630e91d7e9a409bfed175ca46e899c14/payload_windows.dd#L28
+https://github.com/AleksaMCode/WiFi-password-stealer/blob/598e2454855374a9cd362cda40bd2623c0713731/payload/payload_windows.dd#L31
 
 > **Note**: 
 > <ul>
@@ -95,7 +95,7 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/d99f11cd630e91d7e9a409
 > </p>
 
 ### Linux exploit
-<p align="justify">In order to use the Linux payload, called <code>payload2.dd</code>, you need to connect a jumper wire between <code>GND</code> and <code>GPIO5</code> in order to comply with the code in <a href="https://github.com/dbisu/pico-ducky/blob/main/duckyinpython.py"><code>code.py</code></a> on your RPi Pico. For more information about how to setup multiple payloads on your RPi Pico visit this <a href="https://github.com/dbisu/pico-ducky#multiple-payloads">link</a>. <p align="center"><img src="./resources/linux-mint_exploit.gif?raw=true" title="Linux exploit" width="450" hspace="5" vspace="5"></p>
+<p align="justify">In order to use the Linux payload (<code>payload2.dd</code>) you need to connect a jumper wire between <code>GND</code> and <code>GPIO5</code> in order to comply with the code in <a href="https://github.com/dbisu/pico-ducky/blob/main/duckyinpython.py"><code>code.py</code></a> on your RPi Pico. For more information about how to setup multiple payloads on your RPi Pico visit this <a href="https://github.com/dbisu/pico-ducky#multiple-payloads">link</a>. <p align="center"><img src="./resources/linux-mint_exploit.gif" title="Linux exploit" width="450" hspace="5" vspace="5"></p>
 
 #### Transfering stolen data to USB flash drive
 <p align="justify">Once passwords have been exported from the computer, data will be saved to the appointed USB flash drive. In order for this payload to function properly, it needs to be updated with the correct name of your USB drive, meaning you will need to replace <i>UsbStick</i> with the name of your USB drive in two places.</p>
