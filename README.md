@@ -17,7 +17,7 @@
     - [Windows exploit](#windows-exploit)
       - [Sending stolen data over email](#sending-stolen-data-over-email)
     - [Linux exploit](#linux-exploit)
-      - [Transfering stolen data to USB flash drive](#transfering-stolen-data-to-usb-flash-drive)
+      - [Storing stolen data to USB flash drive](#storing-stolen-data-to-usb-flash-drive)
       - [Bash script](#bash-script)
       - [Quick overview of the payload](#quick-overview-of-the-payload)
     - [Exfiltrated data formatting](#exfiltrated-data-formatting)
@@ -33,15 +33,15 @@
 
 ## Prerequisites
 <ul>
-<li>Physical access to victim's computer.</li>
-<li>Unlocked victim's computer.</li>
+<li><p align="justify">Physical access to victim's computer.</p></li>
+<li><p align="justify">Unlocked victim's computer.</p></li>
 <li><p align="justify">Victim's computer has to have an internet access in order to send the stolen data using <a href="https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol">SMTP</a> for the exfiltration over a network medium.</li></p>
-<li>Knowledge of victim's computer password for the Linux exploit.</li>
+<li><p align="justify">Knowledge of victim's computer password for the Linux exploit.</p></li>
 </ul>
 
 ## Requirements - What you'll need
 <p align="justify"><img src="./resources/RPi-pico.png?raw=true" width="150" title="RPi pico illustration" align="left" hspace="5" vspace="5">
-<br><br>
+<br>
 <ul>
 <li>Raspberry Pi Pico (RPi Pico)</li>
 <li>Micro USB to USB Cable</li>
@@ -97,7 +97,7 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/598e2454855374a9cd362c
 ### Linux exploit
 <p align="justify">In order to use the Linux payload (<code>payload2.dd</code>) you need to connect a jumper wire between <code>GND</code> and <code>GPIO5</code> in order to comply with the code in <a href="https://github.com/dbisu/pico-ducky/blob/main/duckyinpython.py"><code>code.py</code></a> on your RPi Pico. For more information about how to setup multiple payloads on your RPi Pico visit this <a href="https://github.com/dbisu/pico-ducky#multiple-payloads">link</a>. <p align="center"><img src="./resources/linux-mint_exploit.gif" title="Linux exploit" width="600" hspace="5" vspace="5"></p>
 
-#### Transfering stolen data to USB flash drive
+#### Storing stolen data to USB flash drive
 <p align="justify">Once passwords have been exported from the computer, data will be saved to the appointed USB flash drive. In order for this payload to function properly, it needs to be updated with the correct name of your USB drive, meaning you will need to replace <i>UsbStick</i> with the name of your USB drive in two places.</p>
 
 https://github.com/AleksaMCode/WiFi-password-stealer/blob/e9a2376c00412d9021514e2131d23068a5762d5c/payload/payload_linux.dd#L3
