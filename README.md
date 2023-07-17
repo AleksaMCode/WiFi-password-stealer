@@ -29,7 +29,7 @@
 <p align="justify">During the summer of 2022, I decided to do exactly that, to build a device that will allow me to steal data from a victim's computer. So, how does one deploy malware and exfiltrate data? In the following text I will explain all of the necessary steps, theory and nuances when it comes to building your own keystroke injection tool. While this project/tutorial focuses on WiFi passwords, payload code could easily be altered to do something more nefarious than stealing stored WiFi passwords. You are only limited by your imagination (and your technical skills).</p>
 
 ## Setup
-<p align="justify">After creating pico-ducky, you only need to copy the modified payload (adjusted for your SMTP details for Windows exploit and adjusted for the Linux password and USB drive name) to the RPi Pico.</p>
+<p align="justify">After creating pico-ducky, you only need to copy the modified payload (adjusted for your SMTP details for Windows exploit and/or adjusted for the Linux password and a USB drive name) to the RPi Pico.</p>
 
 ## Prerequisites
 <ul>
@@ -146,10 +146,10 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a
 <li><p align="justify">The Linux exploit is far less likely to be successful, because in order to succeed, you not only need physical access to an unlocked device, you also need to know the admins password for the Linux machine.</p></li>
 <li><p align="justify">Machine's firewall or network's firewall may prevent stolen data from being sent over the network medium.</p></li>
 <li><p align="justify">Payload delays could be inadequate due to varying speeds of different computers used to deploy an attack.</p></li>
-<li><p align="justify">This device isn't really stealthy, actually it's quite the opposite, it's really bulky.</p></li>
+<li><p align="justify">This picko-ducky device isn't really stealthy, actually it's quite the opposite, it's really bulky.</p></li>
 <li><p align="justify"><s>If the <code>Caps Lock</code> is ON, some of the payload code will not be executed and the exploit will fail.</p></s></li>
 <li><p align="justify">If the computer has a non-English Environment set, this exploit won't be successful.</p></li>
-<li><p align="justify">Currently, pico-ducky doesn't supports DuckyScript 3.0, only DuckyScript 1.0 is supported.</p></li>
+<li><p align="justify">Currently, pico-ducky doesn't supports DuckyScript 3.0, only DuckyScript 1.0 is supported. If you need to use 3.0 version you will have to use the Rubber Ducky.</p></li>
 </ul>
 
 ## To-Do List
