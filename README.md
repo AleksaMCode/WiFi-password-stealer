@@ -98,7 +98,7 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44
 <p align="justify">In order to use the Linux payload (<code>payload2.dd</code>) you need to connect a jumper wire between <code>GND</code> and <code>GPIO5</code> in order to comply with the code in <a href="https://github.com/dbisu/pico-ducky/blob/main/duckyinpython.py"><code>code.py</code></a> on your RPi Pico. For more information about how to setup multiple payloads on your RPi Pico visit this <a href="https://github.com/dbisu/pico-ducky#multiple-payloads">link</a>. <p align="center"><img src="./resources/linux-mint_exploit.gif" title="Linux exploit" width="600" hspace="5" vspace="5"></p>
 
 #### Storing stolen data to USB flash drive
-<p align="justify">Once passwords have been exported from the computer, data will be saved to the appointed USB flash drive. In order for this payload to function properly, it needs to be updated with the correct name of your USB drive, meaning you will need to replace <i>UsbStick</i> with the name of your USB drive in two places.</p>
+<p align="justify">Once passwords have been exported from the computer, data will be saved to the appointed USB flash drive. In order for this payload to function properly, it needs to be updated with the correct name of your USB drive, meaning you will need to replace <code>USBSTICK</code> with the name of your USB drive in two places.</p>
 
 https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44d1afe81d82248ba3fe/payload/payload_linux.template.dd#L3
 
@@ -111,7 +111,7 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44
 https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44d1afe81d82248ba3fe/payload/payload_linux.template.dd#L9
 
 #### Bash script
-<p align="justify">In order to run the <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/scripts/wifi_passwords_print.sh"><code>wifi_passwords_print.sh</code></a> script you will need type in the following command in you terminal:</p>
+<p align="justify">In order to run the <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/scripts/wifi_passwords_print.sh"><code>wifi_passwords_print.sh</code></a> script you will need to update the script with the correct name of your USB stick after which you can type in the following command in your terminal:</p>
 
 ```bash
 echo PASSWORD | sudo -S sh wifi_passwords_print.sh
