@@ -82,9 +82,9 @@
 <p align="justify">In order to use the Windows payload (<code>payload.dd</code>), you don't need to connect any jumper wire between pins.</p>
 
 #### Sending stolen data over email
-<p align="justify">Once passwords have been exported to the <code>.txt</code> file, payload will send the data to the appointed email using Yahoo SMTP. For more detailed instructions visit a following <a href="https://github.com/AleksaMCode/university-notices-email-notifier#yahoo-smtp">link</a>. Also, the payload needs to be updated with your SMTP information.</p>
+<p align="justify">Once passwords have been exported to the <code>.txt</code> file, payload will send the data to the appointed email using Yahoo SMTP. For more detailed instructions visit a following <a href="https://github.com/AleksaMCode/university-notices-email-notifier#yahoo-smtp">link</a>. Also, the payload template needs to be updated with your SMTP information, meaning that you need to update <code>RECEIVER_EMAIL</code>, <code>SENDER_EMAIL</code> and yours email <code>PASSWORD</code>. In addition, you could also update the body and the subject of the email.</p>
 
-https://github.com/AleksaMCode/WiFi-password-stealer/blob/598e2454855374a9cd362cda40bd2623c0713731/payload/payload_windows.dd#L31
+https://github.com/AleksaMCode/WiFi-password-stealer/blob/598e2454855374a9cd362cda40bd2623c0713731/payload/payload_windows.template.dd#L31
 
 > **Note**: 
 > <ul>
@@ -100,22 +100,24 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/598e2454855374a9cd362c
 #### Storing stolen data to USB flash drive
 <p align="justify">Once passwords have been exported from the computer, data will be saved to the appointed USB flash drive. In order for this payload to function properly, it needs to be updated with the correct name of your USB drive, meaning you will need to replace <i>UsbStick</i> with the name of your USB drive in two places.</p>
 
-https://github.com/AleksaMCode/WiFi-password-stealer/blob/e9a2376c00412d9021514e2131d23068a5762d5c/payload/payload_linux.dd#L3
+https://github.com/AleksaMCode/WiFi-password-stealer/blob/e9a2376c00412d9021514e2131d23068a5762d5c/payload/payload_linux.template.dd#L3
 
-https://github.com/AleksaMCode/WiFi-password-stealer/blob/e9a2376c00412d9021514e2131d23068a5762d5c/payload/payload_linux.dd#L11
+https://github.com/AleksaMCode/WiFi-password-stealer/blob/e9a2376c00412d9021514e2131d23068a5762d5c/payload/payload_linux.template.dd#L11
 
-<p align="justify">In addition, you will also need to update the Linux password in the payload in three places. As stated above, in order for this exploit to be successful, you will need to know the victim's Linux machine password.</p>
+<p align="justify">In addition, you will also need to update the Linux PASSWORD in the payload in three places. As stated above, in order for this exploit to be successful, you will need to know the victim's Linux machine password, which makes this attack less plausible.</p>
 
-https://github.com/AleksaMCode/WiFi-password-stealer/blob/e9a2376c00412d9021514e2131d23068a5762d5c/payload/payload_linux.dd#L7
+https://github.com/AleksaMCode/WiFi-password-stealer/blob/e9a2376c00412d9021514e2131d23068a5762d5c/payload/payload_linux.template.dd#L7
 
-https://github.com/AleksaMCode/WiFi-password-stealer/blob/e9a2376c00412d9021514e2131d23068a5762d5c/payload/payload_linux.dd#L9
+https://github.com/AleksaMCode/WiFi-password-stealer/blob/e9a2376c00412d9021514e2131d23068a5762d5c/payload/payload_linux.template.dd#L9
 
 #### Bash script
 <p align="justify">In order to run the <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/scripts/wifi_passwords_print.sh"><code>wifi_passwords_print.sh</code></a> script you will need type in the following command in you terminal:</p>
 
 ```bash
-echo password | sudo -S sh wifi_passwords_print.sh
+echo PASSWORD | sudo -S sh wifi_passwords_print.sh
 ```
+
+where `PASSWORD` is your account's password.
 
 #### Quick overview of the payload
 <p align="justify"><b>NetworkManager</b> is based on the concept of connection profiles, and it uses plugins for reading/writing data. It uses <code>.ini-style</code> keyfile format and stores network configuration profiles. The <b>keyfile</b> is a plugin that supports all the connection types and capabilities that <b>NetworkManager</b> has. The files are located in <i>/etc/NetworkManager/system-connections/</i>. Based on the <b>keyfile</b> format, the payload uses the <code>grep</code> command with regex in order to extract data of interest. For file filtering, a modified positive lookbehind assertion was used (<code>(?<=keyword)</code>). While the positive lookbehind assertion will match at a certain position in the string, <a href="https://en.wikipedia.org/wiki/Viz.">sc.</a> at a position right after the <i>keyword</i> without making that text itself part of the match, the regex <code>(?<=keyword).*</code> will match any text after the <i>keyword</i>. This allows the payload to match the values after <b>SSID</b> and <b>psk</b> (<a href="https://en.wikipedia.org/wiki/Pre-shared_key">pre-shared key</a>) keywords.</p>
