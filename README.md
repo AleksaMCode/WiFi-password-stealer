@@ -26,7 +26,7 @@
   - [To-Do List](#to-do-list)
 
 ## Introduction
-<p align="justify">During the summer of 2022, I decided to do exactly that, to build a device that will allow me to steal data from a victim's computer. So, how does one deploy malware and exfiltrate data? In the following text I will explain all of the necessary steps, theory and nuances when it comes to building your own keystroke injection tool. While this project/tutorial focuses on WiFi passwords, payload code could easily be altered to do something more nefarious than stealing stored WiFi passwords. You are only limited by your imagination (and your technical skills).</p>
+<p align="justify">During the summer of 2022, I decided to do exactly that, to build a device that will allow me to steal data from a victim's computer. So, how does one deploy malware and exfiltrate data? In the following text I will explain all of the necessary steps, theory and nuances when it comes to building your own keystroke injection tool. While this project/tutorial focuses on WiFi passwords, payload code could easily be altered to do something more nefarious. You are only limited by your imagination (and your technical skills).</p>
 
 ## Setup
 <p align="justify">After creating pico-ducky, you only need to copy the modified payload (adjusted for your SMTP details for Windows exploit and/or adjusted for the Linux password and a USB drive name) to the RPi Pico.</p>
@@ -70,11 +70,11 @@
 <ul>
 <li>Exfiltration over the network medium.</li>
   <ul>
-    <li><p align="justify">This approach was used for the Windows exploit. The whole payload can be seen <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/payload/payload_windows.dd">here</a>.</li>
+    <li><p align="justify">This approach was used for the Windows exploit. The whole payload can be seen <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/payload/payload_windows.template.dd">here</a>.</li>
   </ul>
 <li>Exfiltration over a physical medium.</li>
   <ul>
-    <li><p align="justify">This approach was used for the Linux exploit. The whole payload can be seen <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/payload/payload_linux.dd">here</a>.</li>
+    <li><p align="justify">This approach was used for the Linux exploit. The whole payload can be seen <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/payload/payload_linux.template.dd">here</a>.</li>
   </ul>
 </ul>
 
