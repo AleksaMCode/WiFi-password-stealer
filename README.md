@@ -104,7 +104,7 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44
 
 https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44d1afe81d82248ba3fe/payload/payload_linux.template.dd#L11
 
-<p align="justify">In addition, you will also need to update the Linux PASSWORD in the payload in three places. As stated above, in order for this exploit to be successful, you will need to know the victim's Linux machine password, which makes this attack less plausible.</p>
+<p align="justify">In addition, you will also need to update the Linux <code>PASSWORD</code> in the payload in three places. As stated above, in order for this exploit to be successful, you will need to know the victim's Linux machine password, which makes this attack less plausible.</p>
 
 https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44d1afe81d82248ba3fe/payload/payload_linux.template.dd#L7
 
