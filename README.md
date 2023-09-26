@@ -22,6 +22,7 @@
       - [Quick overview of the payload](#quick-overview-of-the-payload)
     - [Exfiltrated data formatting](#exfiltrated-data-formatting)
   - [USB Mass Storage Device Problem](#usb-mass-storage-device-problem)
+  - [Payload Writer](#payload-writer)
   - [Limitations/Drawbacks](#limitationsdrawbacks)
   - [To-Do List](#to-do-list)
 
@@ -114,10 +115,10 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44
 <p align="justify">In order to run the <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/scripts/wifi_passwords_print.sh"><code>wifi_passwords_print.sh</code></a> script you will need to update the script with the correct name of your USB stick after which you can type in the following command in your terminal:</p>
 
 ```bash
-echo PASSWORD | sudo -S sh wifi_passwords_print.sh
+echo PASSWORD | sudo -S sh wifi_passwords_print.sh USBSTICK
 ```
 
-where `PASSWORD` is your account's password.
+where `PASSWORD` is your account's password and `USBSTICK` is the name for your USB device.
 
 #### Quick overview of the payload
 <p align="justify"><b>NetworkManager</b> is based on the concept of connection profiles, and it uses plugins for reading/writing data. It uses <code>.ini-style</code> keyfile format and stores network configuration profiles. The <b>keyfile</b> is a plugin that supports all the connection types and capabilities that <b>NetworkManager</b> has. The files are located in <i>/etc/NetworkManager/system-connections/</i>. Based on the <b>keyfile</b> format, the payload uses the <code>grep</code> command with regex in order to extract data of interest. For file filtering, a modified positive lookbehind assertion was used (<code>(?<=keyword)</code>). While the positive lookbehind assertion will match at a certain position in the string, <a href="https://en.wikipedia.org/wiki/Viz.">sc.</a> at a position right after the <i>keyword</i> without making that text itself part of the match, the regex <code>(?<=keyword).*</code> will match any text after the <i>keyword</i>. This allows the payload to match the values after <b>SSID</b> and <b>psk</b> (<a href="https://en.wikipedia.org/wiki/Pre-shared_key">pre-shared key</a>) keywords.</p>
@@ -140,6 +141,13 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a
 > <li>Upload your payload to RPi Pico before you connect the pins.</li>
 > <li>Don't solder the pins because you will probably want to change/update the payload at some point.</li>
 > </ul>
+
+## Payload Writer
+<p align="justify">When creating a functioning payload file, you can use the <code>writer.py</code> script, or you can manually change the template file. In order to run the script successfully you will need to pass in addition to the script wile name, a name of the OS (<i>windows</i> or <i>linux</i>) and the name of the payload file (e.q. <i>payload.dd</i>). Below you can find an example how to run the script when creating a Windows payload.</p>
+
+```bash
+python3 writer.py windows payload.dd
+```
 
 ## Limitations/Drawbacks
 <ul>
