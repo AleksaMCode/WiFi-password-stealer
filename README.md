@@ -114,10 +114,10 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44
 <p align="justify">In order to run the <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/scripts/wifi_passwords_print.sh"><code>wifi_passwords_print.sh</code></a> script you will need to update the script with the correct name of your USB stick after which you can type in the following command in your terminal:</p>
 
 ```bash
-echo PASSWORD | sudo -S sh wifi_passwords_print.sh
+echo PASSWORD | sudo -S sh wifi_passwords_print.sh USBSTICK
 ```
 
-where `PASSWORD` is your account's password.
+where `PASSWORD` is your account's password and `USBSTICK` is the name for your USB device.
 
 #### Quick overview of the payload
 <p align="justify"><b>NetworkManager</b> is based on the concept of connection profiles, and it uses plugins for reading/writing data. It uses <code>.ini-style</code> keyfile format and stores network configuration profiles. The <b>keyfile</b> is a plugin that supports all the connection types and capabilities that <b>NetworkManager</b> has. The files are located in <i>/etc/NetworkManager/system-connections/</i>. Based on the <b>keyfile</b> format, the payload uses the <code>grep</code> command with regex in order to extract data of interest. For file filtering, a modified positive lookbehind assertion was used (<code>(?<=keyword)</code>). While the positive lookbehind assertion will match at a certain position in the string, <a href="https://en.wikipedia.org/wiki/Viz.">sc.</a> at a position right after the <i>keyword</i> without making that text itself part of the match, the regex <code>(?<=keyword).*</code> will match any text after the <i>keyword</i>. This allows the payload to match the values after <b>SSID</b> and <b>psk</b> (<a href="https://en.wikipedia.org/wiki/Pre-shared_key">pre-shared key</a>) keywords.</p>
