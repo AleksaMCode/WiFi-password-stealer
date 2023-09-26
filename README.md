@@ -22,6 +22,7 @@
       - [Quick overview of the payload](#quick-overview-of-the-payload)
     - [Exfiltrated data formatting](#exfiltrated-data-formatting)
   - [USB Mass Storage Device Problem](#usb-mass-storage-device-problem)
+  - [Payload Writer](#payload-writer)
   - [Limitations/Drawbacks](#limitationsdrawbacks)
   - [To-Do List](#to-do-list)
 
@@ -140,6 +141,13 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a
 > <li>Upload your payload to RPi Pico before you connect the pins.</li>
 > <li>Don't solder the pins because you will probably want to change/update the payload at some point.</li>
 > </ul>
+
+## Payload Writer
+<p align="justify">When creating a functioning payload file, you can use the <code>writer.py</code> script, or you can manually change the template file. In order to run the script successfully you will need to pass in addition to the script wile name, a name of the OS (<i>windows</i> or <i>linux</i>) and the name of the payload file (e.q. <i>payload.dd</i>). Below you can find an example how to run the script when creating a Windows payload.</p>
+
+```bash
+python3 writer.py windows payload.dd
+```
 
 ## Limitations/Drawbacks
 <ul>
