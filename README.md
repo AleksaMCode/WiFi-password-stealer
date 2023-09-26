@@ -80,12 +80,12 @@
 </ul>
 
 ### Windows exploit
-<p align="justify">In order to use the Windows payload (<code>payload.dd</code>), you don't need to connect any jumper wire between pins.</p>
+<p align="justify">In order to use the Windows payload (<code>payload1.dd</code>), you don't need to connect any jumper wire between pins.</p>
 
 #### Sending stolen data over email
 <p align="justify">Once passwords have been exported to the <code>.txt</code> file, payload will send the data to the appointed email using Yahoo SMTP. For more detailed instructions visit a following <a href="https://github.com/AleksaMCode/university-notices-email-notifier#yahoo-smtp">link</a>. Also, the payload template needs to be updated with your SMTP information, meaning that you need to update <code>RECEIVER_EMAIL</code>, <code>SENDER_EMAIL</code> and yours email <code>PASSWORD</code>. In addition, you could also update the body and the subject of the email.</p>
 
-https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44d1afe81d82248ba3fe/payload/payload_windows.template.dd#L31
+https://github.com/AleksaMCode/WiFi-password-stealer/blob/25cf7c56a7df4a9811b4d3eab8d6e6dad4282055/payload/payload_windows.template.dd#L31
 
 > **Note**: 
 > <ul>
@@ -101,9 +101,9 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44
 #### Storing stolen data to USB flash drive
 <p align="justify">Once passwords have been exported from the computer, data will be saved to the appointed USB flash drive. In order for this payload to function properly, it needs to be updated with the correct name of your USB drive, meaning you will need to replace <code>USBSTICK</code> with the name of your USB drive in two places.</p>
 
-https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44d1afe81d82248ba3fe/payload/payload_linux.template.dd#L3
+https://github.com/AleksaMCode/WiFi-password-stealer/blob/25cf7c56a7df4a9811b4d3eab8d6e6dad4282055/payload/payload_linux.template.dd#L3
 
-https://github.com/AleksaMCode/WiFi-password-stealer/blob/a90ffb208e6a09d1b0ae44d1afe81d82248ba3fe/payload/payload_linux.template.dd#L11
+https://github.com/AleksaMCode/WiFi-password-stealer/blob/25cf7c56a7df4a9811b4d3eab8d6e6dad4282055/payload/payload_linux.template.dd#L11
 
 <p align="justify">In addition, you will also need to update the Linux <code>PASSWORD</code> in the payload in three places. As stated above, in order for this exploit to be successful, you will need to know the victim's Linux machine password, which makes this attack less plausible.</p>
 
@@ -143,7 +143,7 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a
 > </ul>
 
 ## Payload Writer
-<p align="justify">When creating a functioning payload file, you can use the <code>writer.py</code> script, or you can manually change the template file. In order to run the script successfully you will need to pass in addition to the script wile name, a name of the OS (<i>windows</i> or <i>linux</i>) and the name of the payload file (e.q. <i>payload.dd</i>). Below you can find an example how to run the script when creating a Windows payload.</p>
+<p align="justify">When creating a functioning payload file, you can use the <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/payload/writer.py"><code>writer.py</code></a> script, or you can manually change the template file. In order to run the script successfully you will need to pass in addition to the script wile name, a name of the OS (<i>windows</i> or <i>linux</i>) and the name of the payload file (e.q. <i>payload.dd</i>). Below you can find an example how to run the script when creating a Windows payload.</p>
 
 ```bash
 python3 writer.py windows payload.dd
