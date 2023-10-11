@@ -129,7 +129,7 @@ where `PASSWORD` is your account's password and `USBSTICK` is the name for your 
 
 <p align="justify">For more information about <b>NetworkManager</b> here is some useful links:</p>
 
-- [Manually creating NetworkManager profiles in keyfile format](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/assembly_manually-creating-networkmanager-profiles-in-keyfile-format_configuring-and-managing-networking)
+- [Manually creating NetworkManager profiles in keyfile format](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/assembly_networkmanager-connection-profiles-in-keyfile-format_configuring-and-managing-networking#proc_manually-creating-a-networkmanager-profile-in-keyfile-format_assembly_networkmanager-connection-profiles-in-keyfile-format)
 - [Description of keyfile settings plugin](https://developer-old.gnome.org/NetworkManager/stable/nm-settings-keyfile.html)
 
 ### Exfiltrated data formatting
