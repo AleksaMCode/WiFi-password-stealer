@@ -143,10 +143,10 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a
 > </ul>
 
 ## Payload Writer
-<p align="justify">When creating a functioning payload file, you can use the <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/payload/writer.py"><code>writer.py</code></a> script, or you can manually change the template file. In order to run the script successfully you will need to pass in addition to the script wile name, a name of the OS (<i>windows</i> or <i>linux</i>) and the name of the payload file (e.q. <i>payload.dd</i>). Below you can find an example how to run the script when creating a Windows payload.</p>
+<p align="justify">When creating a functioning payload file, you can use the <a href="https://github.com/AleksaMCode/WiFi-password-stealer/blob/main/payload/writer.py"><code>writer.py</code></a> script, or you can manually change the template file. In order to run the script successfully you will need to pass, in addition to the script file name, a name of the OS (<i>windows</i> or <i>linux</i>) and the name of the payload file (e.q. <i><a href="https://github.com/AleksaMCode/WiFi-password-stealer/releases/latest/download/payload1.dd">payload1.dd</a></i>). Below you can find an example how to run the <i>writer</i> script when creating a Windows payload.</p>
 
 ```bash
-python3 writer.py windows payload.dd
+python3 writer.py windows payload1.dd
 ```
 
 ## Limitations/Drawbacks
@@ -156,10 +156,11 @@ python3 writer.py windows payload.dd
 <li><p align="justify">The Linux exploit is far less likely to be successful, because in order to succeed, you not only need physical access to an unlocked device, you also need to know the admins password for the Linux machine.</p></li>
 <li><p align="justify">Machine's firewall or network's firewall may prevent stolen data from being sent over the network medium.</p></li>
 <li><p align="justify">Payload delays could be inadequate due to varying speeds of different computers used to deploy an attack.</p></li>
-<li><p align="justify">This picko-ducky device isn't really stealthy, actually it's quite the opposite, it's really bulky.</p></li>
+<li><p align="justify">The pico-ducky device isn't really stealthy, actually it's quite the opposite, it's really bulky especially if you solder the pins.</p></li>
+<li><p align="justify">Also, the pico-ducky device is noticeably slower compared to the Rubber Ducky running the same script.</p></li>
 <li><p align="justify"><s>If the <code>Caps Lock</code> is ON, some of the payload code will not be executed and the exploit will fail.</p></s></li>
 <li><p align="justify">If the computer has a non-English Environment set, this exploit won't be successful.</p></li>
-<li><p align="justify">Currently, pico-ducky doesn't supports DuckyScript 3.0, only DuckyScript 1.0 is supported. If you need to use 3.0 version you will have to use the Rubber Ducky.</p></li>
+<li><p align="justify">Currently, pico-ducky doesn't support DuckyScript 3.0, only DuckyScript 1.0 can be used. If you need the 3.0 version you will have to use the Rubber Ducky.</p></li>
 </ul>
 
 ## To-Do List
