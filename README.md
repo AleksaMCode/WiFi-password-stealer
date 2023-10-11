@@ -1,7 +1,11 @@
 <img width="150" align="right" src="./resources/wifi-stealer_logo.png"></img>
 # WiFi password stealer
-> **Disclaimer**: All content in this project is intended for security research purpose only.
+[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+![](https://img.shields.io/github/v/release/AleksaMCode/WiFi-password-stealer)
+
 <p align="justify">Have you ever watched a film where a hacker would plug-in, seemingly ordinary, USB drive into a victim's computer and steal data from it? - A proper wet dream for some.
+
+> :warning: **Disclaimer**: All content in this project is intended for security research purpose only.
 
 ## Table of contents
 - [WiFi password stealer](#wifi-password-stealer)
@@ -51,7 +55,7 @@
 <li>USB flash drive (for the exploit over physical medium only)</li>
 </ul></p><br><br>
 
-> **Note**:
+> :memo: **Note**:
 > <ul><li><p align="justify">It is possible to build this tool using Rubber Ducky, but keep in mind that <a href="https://www.raspberrypi.com/products/raspberry-pi-pico/">RPi Pico</a> costs about $4.00 and the <a href="https://shop.hak5.org/products/usb-rubber-ducky">Rubber Ducky</a> costs $80.00.</p></li>
 > <li><p align="justify">However, while pico-ducky is a good and budget-friedly solution, Rubber Ducky does offer things like stealthiness and usage of the lastest DuckyScript version.</p></li>
 > <li><p align="justify">In order to use Ducky Script to write the payload on your RPi Pico you first need to convert it to a pico-ducky. Follow these <a href="https://github.com/dbisu/pico-ducky">simple steps</a> in order to create pico-ducky.</p></li>
@@ -87,7 +91,7 @@
 
 https://github.com/AleksaMCode/WiFi-password-stealer/blob/25cf7c56a7df4a9811b4d3eab8d6e6dad4282055/payload/payload_windows.template.dd#L31
 
-> **Note**: 
+> :memo: **Note**: 
 > <ul>
 > <li><p align="justify">After sending data over the email, the <code>.txt</code> file is deleted.</p></li>
 > <li><p align="justify">You can also use some an SMTP from another email provider, but you should be mindful of SMTP server and port number you will write in the payload.</p></li>
@@ -136,7 +140,7 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/f5b3b11328764eb07d765a
 ## USB Mass Storage Device Problem
 <p align="justify">One of the advantages of Rubber Ducky over RPi Pico is that it doesn't show up as a USB mass storage device once plugged in. Once plugged into the computer, all the machine sees it as a USB keyboard. This isn't a default behavior for the RPi Pico. If you want to prevent your RPi Pico from showing up as a USB mass storage device when plugged in, you need to connect a jumper wire between pin 18 (<code>GND</code>) and pin 20 (<code>GPIO15</code>). For more details visit this <a href="https://github.com/dbisu/pico-ducky#usb-enabledisable-mode">link</a>.</p>
 
-> **Note**:
+> :bulb: **Tip**:
 > <ul>
 > <li>Upload your payload to RPi Pico before you connect the pins.</li>
 > <li>Don't solder the pins because you will probably want to change/update the payload at some point.</li>
