@@ -1,7 +1,8 @@
 <img width="150" align="right" src="./resources/wifi-stealer_logo.png"></img>
 # WiFi password stealer
-[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[![License: GPL v2](https://img.shields.io/badge/license-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 ![](https://img.shields.io/github/v/release/AleksaMCode/WiFi-password-stealer)
+![](https://img.shields.io/github/downloads/AleksaMCode/WiFi-password-stealer/total.svg)
 
 <p align="justify">Have you ever watched a film where a hacker would plug-in, seemingly ordinary, USB drive into a victim's computer and steal data from it? - A proper wet dream for some.
 
