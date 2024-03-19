@@ -4,9 +4,9 @@
 ![](https://img.shields.io/github/v/release/AleksaMCode/WiFi-password-stealer)
 ![](https://img.shields.io/github/downloads/AleksaMCode/WiFi-password-stealer/total.svg)
 
-<p align="justify">Have you ever watched a film where a hacker would plug-in, seemingly ordinary, USB drive into a victim's computer and steal data from it? - A proper wet dream for some.
+<p align="justify">Have you ever watched a film where a hacker would plug-in, seemingly ordinary, USB drive into a victim's computer and steal data from it? - Today you will build exactly that.
 
-> :warning: **Disclaimer**: All content in this project is intended for security research purpose only.
+> :warning: **Disclaimer**: All content in this project is intended for security research purposes only.
 
 ## Table of contents
 - [WiFi password stealer](#wifi-password-stealer)
