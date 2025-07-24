@@ -114,7 +114,20 @@ https://github.com/AleksaMCode/WiFi-password-stealer/blob/25cf7c56a7df4a9811b4d3
 > </p>
 
 #### Linux exploit
-<p align="justify">In order to use the Linux payload (<code>payload2.dd</code>) you need to connect a jumper wire between <code>GND</code> and <code>GPIO5</code> in order to comply with the code in <a href="https://github.com/dbisu/pico-ducky/blob/main/duckyinpython.py"><code>code.py</code></a> on your RPi Pico. For more information about how to setup multiple payloads on your RPi Pico, visit this <a href="https://github.com/dbisu/pico-ducky#multiple-payloads">link</a>. <p align="center"><img src="./resources/linux-mint_exploit.gif" title="Linux exploit" width="600" hspace="5" vspace="5"></p>
+<p align="justify">In order to use the Linux payload (<code>payload2.dd</code>) you need to connect a jumper wire between <code>GND</code> and <code>GPIO5</code> in order to comply with the code in <a href="https://github.com/dbisu/pico-ducky/blob/main/duckyinpython.py"><code>code.py</code></a> on your RPi Pico. For more information about how to setup multiple payloads on your RPi Pico, visit this <a href="https://github.com/dbisu/pico-ducky#multiple-payloads">link</a>. 
+
+<p align="center">
+<img
+src="./resources/linux-mint_exploit.gif"
+alt="Exploit on Linux Mint"
+width="100%"
+class="center"
+/>
+<p align="center">
+    <label><b>Fig. 1</b>: Exploit on Linux Mint</label>
+    </p>
+</p>
+
 
 ##### Storing stolen data to USB flash drive
 <p align="justify">Once passwords have been exported from the computer, data will be saved to the designated USB flash drive. In order for this payload to function properly, it needs to be updated with the correct name of your USB drive, meaning you will need to replace <code>USBSTICK</code> with the name of your USB drive in two places.</p>
@@ -185,7 +198,7 @@ width="100%"
 class="center"
 />
 <p align="center">
-    <label><b>Fig. 1</b>: <i>Bash Bunny Mark I</i> plugged in a PC</label>
+    <label><b>Fig. 2</b>: <i>Bash Bunny Mark I</i> plugged in a PC</label>
     </p>
 </p>
 
@@ -212,7 +225,7 @@ BashBunny/
         └── (optional files)
 ```
 <p align="center">
-    <label><b>Fig. 2</b>: Bash Bunny Mass Storage Directory Structure</label>
+    <label><b>Fig. 3</b>: Bash Bunny Mass Storage Directory Structure</label>
 </p>
 
 <p align="justify">Once the script has finished executing, the results will be saved in <code>loot\wifi_pass.txt</code>. If the target computer has no saved WiFi passwords, the file will be empty.</p>
