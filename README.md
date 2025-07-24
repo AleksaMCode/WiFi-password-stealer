@@ -124,7 +124,7 @@ width="100%"
 class="center"
 />
 <p align="center">
-    <label><b>Fig. 1</b>: Exploit on Linux Mint</label>
+    <label><b>Fig. 1</b>: Exploit on Linux</label>
     </p>
 </p>
 
@@ -205,7 +205,7 @@ class="center"
 <p align="justify">The Bash Bunny supports the original DuckyScript commands, which is why I was able to reuse the script from the Rubber Ducky section. To use these commands inline, we need to prefix them with the <code>QUACK</code> command [1]. For example, instead of writing <code>WINDOWS r</code>, we write <code>Q WINDOWS r</code>. 
 
 
-To load payloads onto the Bash Bunny, the device must be set to <b>arming mode</b> (switch position 3—the one closest to the USB plug) [1]. Once connected, copy <code>payload.txt</code> and <code>exfil.txt</code> to either <code>payloads\switch1</code> or <code>payloads\switch2</code>, depending on which switch position you plan to use. Payloads must be named <code>payload.txt</code>, while any supporting files referenced by the payload can be named freely.
+To load payloads onto the Bash Bunny, the device must be set to <b>arming mode</b> (switch position 3—the one closest to the USB plug) [1]. Once connected, copy <code>payload.txt</code> and <code>exfil.txt</code> to either <code>payloads\switch1</code>. Payloads must be named <code>payload.txt</code> [1,2], while any supporting files referenced by the payload can be named freely.
 
 For reference, the Bash Bunny mass storage directory structure is as follows [2]:
 </p>
