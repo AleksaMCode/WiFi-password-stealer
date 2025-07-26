@@ -32,7 +32,6 @@
   - [Bash Bunny attack](#bash-bunny-attack)
   - [Limitations/Drawbacks](#limitationsdrawbacks)
   - [References](#references)
-  - [To-Do List](#to-do-list)
 
 ## Introduction
 <p align="justify">In the summer of 2022, I set out to build a device capable of extracting data from a target computer. But how exactly does one deploy malware and exfiltrate information? In the following sections, I’ll walk through the essential steps, underlying concepts, and technical nuances involved in creating a custom keystroke injection tool. While this project specifically targets WiFi credentials, the payload can easily be modified for more advanced or malicious purposes—the only real limits are your creativity and technical expertise.</p>
@@ -182,7 +181,7 @@ python3 writer.py windows payload1.dd
 
 ## Bash Bunny attack 
 
-<p align="justify">With a few minor modifications, the previously used scripts can also be adapted to run on the Bash Bunny. The Bash Bunny works by emulating a trusted USB device [1]. For this project, we’ll configure it to emulate a flash storage device using the following command [1,2]:</p>
+<p align="justify">With a few minor modifications, the previously used scripts can also be adapted to run on the Bash Bunny. The Bash Bunny works by emulating a trusted USB device [1]. For this project, we’ll configure it to emulate a flash storage device using the following command [1, 2]:</p>
 
 ```
 ATTACKMODE HID STORAGE
@@ -251,14 +250,3 @@ BashBunny/
 
 1. [Bash Bunny by Hak5 Documentation](https://docs.hak5.org/bash-bunny/bash-bunny-by-hak5/)
 2. [Bash Bunny Basics Wiki](https://wiki.bashbunny.com/#!index.md)
-
-## To-Do List
-- [x] Fix `Caps Lock` bug.
-- [ ] Fix non-English Environment bug.
-- [ ] Obfuscate the command prompt.
-- [x] Implement exfiltration over a physical medium.
-- [x] Create a payload for Linux.
-- [ ] Encode/Encrypt exfiltrated data before sending it over email.
-- [ ] Implement indicator of successfully completed exploit.
-- [ ] Implement command history clean-up for Linux exploit.
-- [ ] Enhance the Linux exploit in order to avoid usage of `sudo`.
